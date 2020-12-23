@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 2rem;
+    background: black;
+    color: white;
+}
+
+.navigation-parent{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+.navigation-parent a{
+    color: #7c7c7c;
+    text-decoration: none;
+}
+.navigation-parent a:hover{
+    text-shadow: 0px 10px 10px #ffffff;/* It helps in bringing the shadow */
+    
+}
+.img-container{
+    height: 800px;
+    display: inline;
+    border: 1px solid rgb(0, 0, 0);
+    width: 2000px;
+}
+.hero-section{
+    padding-top: 6rem;
+    display: flex;
+    
+}
+
+.name{
+    font-size: 6rem;
+    position: relative;
+    /* top: 350px; */
+    /* left: 50%; */
+    font-family: 'Montserrat', sans-serif;
+    animation: moveInFromRight 2s;
+}
+.first{
+    
+    position: absolute;
+    top: 220px;
+    left: -600px;
+
+}
+.last{
+    position: absolute;
+    top:350px;
+    left:-400px;
+}
+
+@keyframes moveInFromRight{
+    0%{
+        transform: translateX(400px) scale(4);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width:768px){
+    body{
+        padding: 0;
+    }
+    .img-container{
+        height: 410px;
+    width: 200%;
+    }
+    .name{
+        font-size: 1.5rem;
+
+    }
+    .first{
+     top: 28px;
+     left: -181px;
+    }
+    .last{
+        top: 50px;
+    left: -146px;
+    }
+}
